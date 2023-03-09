@@ -16,7 +16,7 @@ diagnostics.post('/', (req, res) => {
   if (time && error_id && errors) {
     const newDiagnostic = {
       time: Date.now(),
-      error_id,
+      error_id: uuidv4(),
       errors: {
         tip,
         topic,
